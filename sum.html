@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>太阳系</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+     body{
+         background-color: #080e24;
+    }
+    .wrapper{
+        width: 584px;
+        height: 584px;
+        margin: 0 auto;
+        background-color: #080e24;
+        margin-top: 30px;
+    }
+    /*星球轨道样式*/
+
+    /*轨道公共样式*/
+    .ball{
+        border: 2px solid #394057;
+        border-radius: 50%;
+        position: absolute;
+    }
+    /* 冥王星 */
+    .Pluto{
+        width: 580px;
+        height: 580px;
+    }
+    /* 海王星 */
+    .Neptune{
+        width: 523px;
+        height: 523px;
+        top: 50%;
+        left: 50%;
+        margin-top: -261.5px;
+        margin-left: -261.5px;
+    }
+    /* 天王星 */
+    .Uranus{
+        width: 466px;
+        height: 466px;
+        top: 50%;
+        left: 50%;
+        margin-top: -233px;
+        margin-left: -233px;
+    }
+    /* 土星 */
+    .Saturn{
+        width: 409px;
+        height: 409px;
+        top: 50%;
+        left: 50%;
+        margin-top: -204.5px;
+        margin-left:-204.5px;
+    }
+    /* 木星 */
+    .Jupiter{
+        width: 352px;
+        height: 352px;
+        top: 50%;
+        left: 50%;
+        margin-top: -176px;
+        margin-left:-176px;
+    }
+    /* 小行星带 */
+    .asteroids_meteorids{
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -175px;
+        margin-left:-175px;
+        background: url(../img/asteroids_meteorids.png) no-repeat 10px 9px;
+        animation: rotate 50s linear infinite;
+        border-radius: 50%;
+        border: none;
+    }
+    /* 火星 */
+    .Mars{
+        width: 295px;
+        height: 295px;
+        top: 50%;
+        left: 50%;
+        margin-top: -147.5px;
+        margin-left:-147.5px;
+    }
+    /* 地球 */
+    .Earth{
+        width: 238px;
+        height: 238px;
+        top: 50%;
+        left: 50%;
+        margin-top: -119px;
+        margin-left:-119px;
+    }
+    /* 金星 */
+    .Venus{
+        width: 181px;
+        height: 181px;
+        top: 50%;
+        left: 50%;
+        margin-top: -90.5px;
+        margin-left:-90.5px;
+    }
+    /* 水星 */
+    .Mercury{
+        width: 124px;
+        height: 124px;
+        top: 50%;
+        left: 50%;
+        margin-top: -62px;
+        margin-left:-62px;
+    }
+    /* 太阳 */
+    .Sun{
+        width: 67px;
+        height: 67px;
+        top: 50%;
+        left: 50%;
+        margin-top: -33.5px;
+        margin-left:-33.5px; 
+        background: #fc3;
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.22, rgb(204,153,0)), color-stop(1, rgb(255,219,112)) );
+        box-shadow: 0 0 50px #c90;
+        border: none;
+    }
+    @keyframes rotate{
+        to{
+            transform: rotate(1turn);
+        }
+    }
+    /* 星球的样式定义*/
+    .ball_s{
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        margin-left:-5px;
+        top: -5px;
+        animation: rotate 5s linear infinite;
+    }
+    .Mercury_s{
+        background-color: #b6bac5;
+        transform-origin: 50% 67px;
+    }
+    .Venus_s{
+        background-color: #bf8639;
+        transform-origin: 50% 95.5px;
+    }
+    .Earth_s{
+        background-color: #06c;
+        transform-origin: 50% 124px;
+    }
+    .Mars_s{
+        background-color: #aa4200;
+        transform-origin: 50% 152.5px;
+    }
+    .Jupiter_s{
+        background-color: #e0ae6f;
+        transform-origin: 50% 181px;
+    }
+    .Saturn_s{
+        background-color: #dfd3a9;
+        transform-origin: 50% 209.5px;
+    }
+    .ring{
+        width: 12px;
+        height: 12px;
+        border-radius: 8px;
+        position: absolute;
+        background: none;
+        border: 2px solid #5a4e34;
+        left: -3px;
+        top: -3px;
+        transform: skewY(50deg);
+           
+    }
+    .Uranus_s{
+        background-color: #82b3d1;
+        transform-origin: 50% 238px;
+    }
+    .Neptune_s{
+        background-color: #77c2ec;
+        transform-origin: 50% 266.5px;
+    }
+    .Pluto_s{
+        background-color: #7c6a5c;
+        transform-origin: 50% 295px;
+    }
+    .moon{
+        width: 3px;
+        height: 3px;
+        position: absolute;
+        border-radius: 50%;
+        top:-10px; 
+        left:50%;
+        margin-left: -1.5px;
+        animation: rotate 2s linear infinite;
+        background-color: #ccc;
+        transform-origin: 50% 15px;
+    }
+    .Mercury_s {-webkit-animation-duration:5s;}
+    .Venus_s {-webkit-animation-duration:8s;}
+    .Earth_s {-webkit-animation-duration:12s;}
+    .Mars_s {-webkit-animation-duration:20s;}
+    .Jupiter_s {-webkit-animation-duration:30s;}
+    .Saturn_s {-webkit-animation-duration:60s;}
+    .Uranus_s {-webkit-animation-duration:70s;}
+    .Neptune_s {-webkit-animation-duration:100s;}
+    .Pluto_s {-webkit-animation-duration:120s;}
+</style>
+<body>
+<div class="wrapper">
+
+    <div class="Pluto ball">
+        <div class="Pluto_s ball_s">
+            
+        </div>
+        <div class="Neptune ball">
+            <div class="Neptune_s ball_s">
+                
+            </div>
+            <div class="Uranus ball">
+                <div class="Uranus_s ball_s">
+                    
+                </div>
+                <div class="Saturn ball">
+                    <div class="Saturn_s ball_s">
+                        <span class="ring"></span>
+                    </div>
+                    <div class="Jupiter ball">
+                        <div class="Jupiter_s ball_s">
+                            
+                        </div>
+                        <div class="asteroids_meteorids">
+                            
+                        </div>
+                        <div class="Mars ball">
+                            <div class="Mars_s ball_s">
+                                
+                            </div>
+                            <div class="Earth ball">
+                                <div class="Earth_s ball_s">
+                                    <div class="moon"></div>
+                                </div>
+                                <div class="Venus ball">
+                                    <div class="Venus_s ball_s">
+                                        
+                                    </div>
+                                    <div class="Mercury ball">
+                                        <div class="Mercury_s ball_s">
+
+                                        </div>
+                                        <div class="Sun ball">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
